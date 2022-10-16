@@ -1,0 +1,12 @@
+<div>
+  <mat-card class="procedure-card">
+    <mat-icon (click)="goBack.emit()">arrow_back</mat-icon>
+    <mat-card-header>
+      <mat-card-title>{{procedure.term}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="procedure-card__content">
+      <p>Active: <span>{{procedure.active}}</span></p>
+      <p>ID: <span>{{procedure.concept.id}}</span></p>
+    </mat-card-content>
+  </mat-card>
+</div>

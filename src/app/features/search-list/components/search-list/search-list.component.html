@@ -1,0 +1,18 @@
+<div class="search-list">
+  <ng-container *ngIf="selectedProcedure$ | async as selectedProcedure">
+    <procedure-card
+      [procedure]="selectedProcedure"
+      (goBack)="onDeselectProcedure()"
+    >
+    </procedure-card>
+  </ng-container>
+
+  <div [class.hidden]="selectedProcedure$ | async">
+      <div class="search-list__search-box">
+        <search-box></search-box>
+      </div>
+      <search-result></search-result>
+  </div>
+</div>
+
+

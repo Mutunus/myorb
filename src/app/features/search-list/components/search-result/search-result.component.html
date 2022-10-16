@@ -1,0 +1,13 @@
+<mat-selection-list
+  [multiple]="false"
+>
+  <p *ngIf="!(procedures$ | async)">Enter Search Term</p>
+  <mat-list-option
+    #procedureOption
+    *ngFor="let procedure of procedures$ | async"
+    [value]="procedure"
+    (click)="onProcedureSelected(procedureOption.value)"
+  >
+    {{procedure.term}}
+  </mat-list-option>
+</mat-selection-list>

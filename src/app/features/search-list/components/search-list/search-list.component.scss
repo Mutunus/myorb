@@ -1,0 +1,13 @@
+.search-list {
+  padding: 20px;
+  &__search-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
